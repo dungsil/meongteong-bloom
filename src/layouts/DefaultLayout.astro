@@ -1,0 +1,11 @@
+---
+import App, { type AppProps } from '../_app.astro'
+
+interface Props extends AppProps {}
+
+const { title } = Astro.props
+---
+
+<App title={title}>
+  <slot />
+</App>

@@ -1,0 +1,28 @@
+---
+import { APP_NAME } from './constants'
+import FontProvider from './components/FontProvider.astro'
+
+interface Props {
+  title?: string
+}
+export type AppProps = Props
+
+const { title } = Astro.props
+const displayTitle = title ? `${title} | ${APP_NAME}` : APP_NAME
+---
+
+<!DOCTYPE html>
+<html lang="ko-KR" dir="ltr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{displayTitle}</title>
+
+  <FontProvider/>
+</head>
+<body>
+<div id="bloom">
+  <slot/>
+</div>
+</body>
+</html>

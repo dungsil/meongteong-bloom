@@ -1,0 +1,9 @@
+### Astro ###
+.astro/
+
+### Node.js ###
+node_modules/
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
